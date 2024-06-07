@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+    width: 375px;
+    height: 812px;
+}
+
+#label-container {
+    display: none;
+}
+
+#camera-area {
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+#container {
+    z-index: 1;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+    height: 150px;
+    background-color: white;
+    opacity: 0;
+    border-radius: 12px;
+    border: 0.5px solid #E2E2E2;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    transition: opacity 0.5s ease-in-out;
+}
+
+#container.show {
+    opacity: 0.9;
+}
+
+#info-area {
+    position: absolute;
+    bottom: 8px;
+}
+
+#alarm {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.54px;
+}
