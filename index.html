@@ -24,7 +24,7 @@
     <button type="button" onclick="init()">Start</button>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript">
         const URL = "https://teachablemachine.withgoogle.com/models/RHzp15XS5/";
     
@@ -89,10 +89,13 @@
                 isPredicting = true; // Resume predictions
             }, 3000); // Display alarm for 3 seconds
         }
-        
+
         function hideAlarm() {
             $('#alarm').text('');
             $('#container').removeClass('show'); // show 클래스 제거
+            setTimeout(() => {
+                $('#container').css('display', 'none'); // 완전히 숨기기 위해 display 속성 변경
+            }, 500); // 0.5초 후에 display를 none으로 설정 (transition 시간과 동일)
         }
     </script>
 </body>
